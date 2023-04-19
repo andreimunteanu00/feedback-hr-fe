@@ -1,0 +1,41 @@
+.feedback-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.feedback-list-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.feedback-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.pagination-custom .page-link {
+    color: #007bff;
+    background-color: transparent;
+    border: 1px solid #007bff;
+}
+
+.pagination-custom .page-link:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.pagination-custom .page-item.active .page-link {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.pagination-custom .page-item.disabled .page-link {
+    color: #6c757d;
+    background-color: transparent;
+    border-color: #6c757d;
+}
