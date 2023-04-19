@@ -28,6 +28,7 @@
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.4",
     "stream": "0.0.2",
+    "sweetalert2": "^11.7.3",
     "util": "^0.12.5",
     "web-vitals": "^2.1.4"
   },

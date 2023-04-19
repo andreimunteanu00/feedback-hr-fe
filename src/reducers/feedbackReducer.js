@@ -8,7 +8,6 @@ const feedbackReducer = (state = {}, action) => {
         ...state,
       };
     case GET_FEEDBACK:
-      console.log(action.payload);
       return {
         ...state,
         feedback: action.payload

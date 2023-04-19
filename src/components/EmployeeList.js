@@ -5,7 +5,7 @@ import './css/FeedbackList.css';
 import {Pagination} from "semantic-ui-react";
 import {Link} from "react-router-dom";
 
-class FeedbackList extends React.Component {
+class EmployeeList extends React.Component {
 
   state = {
     activePage: 1,
@@ -34,12 +34,12 @@ class FeedbackList extends React.Component {
   renderFeedbacks() {
     return this.props.feedbacks.map((feedback, index) => {
       return (
-          <tr key={index}>
-            <td>{feedback.userEmail}</td>
-            <td>{feedback.subject}</td>
-            <td>{new Date(feedback.createdTimeStamp).toLocaleDateString()}</td>
-            <td><Link to={`/feedback/${feedback.id}`} className="ui inverted button">View</Link></td>
-          </tr>
+        <tr key={index}>
+          <td>{feedback.userEmail}</td>
+          <td>{feedback.subject}</td>
+          <td>{new Date(feedback.createdTimeStamp).toLocaleDateString()}</td>
+          <td><Link to={`/feedback/${feedback.id}`} className="ui inverted button">View</Link></td>
+        </tr>
       );
     });
   }
@@ -92,5 +92,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { fetchFeedbacks }
-)(FeedbackList);
+  { fetchUsers }
+)(EmployeeList);

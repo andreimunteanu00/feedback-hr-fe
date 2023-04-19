@@ -20,4 +20,5 @@ export const logout = () => async dispatch => {
   await api.get('/auth/logout')
   window.localStorage.removeItem('token');
   dispatch({ type: LOGOUT });
+  window.location.href = '/';
 };

@@ -1,7 +1,7 @@
 import api from '../apis/backend';
 import {FETCH_FEEDBACKS, GET_FEEDBACK, GIVE_FEEDBACK} from "./types";
 
-export const createFeedback = (subject, message, isAnonymous) => async dispatch => {
+export const createFeedback = (subject, message, isAnonymous=false) => async dispatch => {
   await api.post('/feedback/create', { subject, message, isAnonymous });
 
   dispatch({ type: GIVE_FEEDBACK });

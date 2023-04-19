@@ -16,11 +16,11 @@ class Header extends React.Component {
   renderMemberLinks() {
     return (
       <Menu.Menu position="right">
-        <Menu.Item as={Link} to="/home">
-          Home
-        </Menu.Item>
         <Menu.Item as={Link} to="/feedback">
           Feedback
+        </Menu.Item>
+        <Menu.Item as={Link} to="/profile">
+          Profile
         </Menu.Item>
         <Menu.Item onClick={() => this.props.logout()}>Logout</Menu.Item>
       </Menu.Menu>
@@ -30,9 +30,6 @@ class Header extends React.Component {
   renderAdminLinks() {
     return (
       <Menu.Menu position="right">
-        <Menu.Item as={Link} to="/">
-          Home
-        </Menu.Item>
         <Menu.Item as={Link} to="/">
           Dashboard
         </Menu.Item>
@@ -60,7 +57,7 @@ class Header extends React.Component {
   render() {
     return (
       <Menu inverted>
-        <Menu.Item header>My App</Menu.Item>
+        <Menu.Item header>HR App</Menu.Item>
         {this.props.isAuthenticated &&
         this.hasRole(this.props.user, 'admin')
           ? this.renderAdminLinks()
